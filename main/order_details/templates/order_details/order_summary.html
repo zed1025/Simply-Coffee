@@ -1,0 +1,44 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <br>
+    <div class="container"><h1>{{user_name}}, here is your order summary!</h1></div><br>
+
+        <div class="container">
+        <table class="table table-sm">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Item</th>
+                <th scope="col">Quantity</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+    {% for item in user_items %}
+          <tbody>
+            <tr>
+              <th scope="row">{{forloop.counter}}</th>
+              <td>{{ item.name }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>&#x20B9;{{ item.price }}</td>
+            </tr>
+          </tbody>
+    {% endfor %}
+        </table>
+
+
+    <h2>Total Payable: &#x20B9; {{ total }}</h2>
+    <h3>Pay at the counter, and collect your item(s).</h3>
+    <br><br>
+    <a href="/"><button type="button" class="btn btn-primary btn-lg btn-block">Home</button></a>
+    </div>
+    <br>
+
+
+
+
+
+
+ {% endblock %}

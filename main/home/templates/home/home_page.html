@@ -1,0 +1,22 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+	<!-- jumbotron -->
+	<div class="jumbotron">
+		<div class="container">
+		  <h1 class="display-4">Hello, welcome to <span class="brand-name">Simply Coffee</span>! It's {{ day }} today!</h1>
+		  <p class="lead">From our signature dark roasts to our newest blends, get fresh, hand-roasted coffee anytime during the year.</p>
+		  <hr class="my-4">
+		  <p>Click the link below to order now.</p>
+		  <a class="btn btn-primary btn-lg" href="new_user/new/" role="button">New Customer</a>
+		  <a class="btn btn-primary btn-lg" href="existing_user/existing_check/" role="button">Existing Customer</a>
+		</div>
+	</div>
+	<!-- jumbotron end -->
+
+
+	{% endblock %}

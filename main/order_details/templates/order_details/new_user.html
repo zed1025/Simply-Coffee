@@ -1,0 +1,32 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="container" style="margin-top: 20px;"><a class="btn btn-primary btn-lg" href="/" role="button" style="float:right;">Cancel</a>
+	</div>
+<br><br>
+	<!-- new-user-form -->
+	<div class="container">
+    <div class="form-style-5">
+        <div class="container">
+            {% if is_existing %}
+            <h1>Oops! We did not find you in our records.</h1><br>
+            {% endif %}
+        </div>
+    <form action="add_new/" method="post">
+		 {% csrf_token %}
+    <fieldset>
+    <legend><span class="number">1</span> New User Registration</legend>
+    <input type="text" name="name" placeholder="Your Name *" required>
+    <input type="number" name="phone" placeholder="Your Phone Number *" required>
+    <input type="email" name="email" placeholder="Enter Email *" required>
+    
+    <input type="submit" value="Continue" />
+    </form>
+    </div>
+    </div>
+
+	<!-- new-user-form end -->
+	
+	{% endblock %}

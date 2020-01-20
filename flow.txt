@@ -1,0 +1,18 @@
+Commands:
+- if static files changed
+    python manage.py collectstatic
+
+
+
+table: customers
+id, name, phone, email
+
+table: order_details
+id, phone(FK to customers), order(serialised json order details)
+
+tbale: items (use this to populate order form)
+id, name, price
+
+
+main page -> new_user -> fill customer details -> order
+main page -> existing user -> enter phone number -> if true -> order

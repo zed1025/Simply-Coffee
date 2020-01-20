@@ -1,0 +1,54 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+    {% block content %}
+    <div class="container" style="margin-top: 20px;"><h1>Welcome {{ customer.name }}.
+	{% if is_existing %}
+		We found you in our records!</h1><br>
+	{% endif %}
+		<a class="btn btn-primary btn-lg" href="/" role="button" style="float:right;">Cancel</a>
+	</div>
+    <!-- order-form -->
+	<div class="container">
+    <div class="form-style-5">
+    <form method="post" action="order_summary/">
+    <legend><span class="number">1</span> Today's Menu</legend><br>
+        {% csrf_token %}
+
+
+        {% for item in menu %}
+    <div class="container">
+    	<div class="row">
+    		<div class="col d-flex align-items-center">
+    			 <div class="pretty p-default">
+			        <input type="checkbox" name="{{forloop.counter0}}"/>
+			        <div class="state p-success">
+			            <label>{{ item.name }}</label>
+			        </div>
+			    </div>
+    		</div>
+    		<div class="col d-flex align-items-center">
+    			&#x20B9; {{ item.price }}
+    		</div>
+    		<div class="col try">
+    			<input type="number" name="qty{{forloop.counter0}}" placeholder="Quantity *" value="1">
+
+    		</div>
+    	</div>
+    </div>
+        {% endfor %}
+
+
+
+    <input type="submit" value="Order" />
+
+    </form>
+    </div>
+    </div>
+	<!-- order-form end -->
+
+
+    {% endblock %}
+
+

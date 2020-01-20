@@ -1,0 +1,32 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+
+
+{% block content %}
+
+	<div class="container" style="margin-top: 20px;"><a class="btn btn-primary btn-lg" href="/" role="button" style="float:right;">Cancel</a>
+	</div>
+
+<br><br><br>
+
+
+	<!-- existing-user -->
+	<form action="is_existing/" method="post">
+		{% csrf_token %}
+	<div class="container">
+	<div class="jumbotron">
+		<h1 class="display-4">Enter Phone Number</h1><br>
+		<div class="input-group input-group-lg">
+			<div class="input-group-prepend">
+			</div>
+			<input type="text" name="phone" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" required>
+		</div><br>
+		<input type="submit" value="Continue" class="btn btn-primary btn-lg" />
+	</div>
+	</div>
+	<!-- existing-user end -->
+	</form>
+{% endblock %}
+
