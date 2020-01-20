@@ -14,11 +14,11 @@ A coffee ordering app made using Django
 - SendGrid
 
 ## Screenshots
-<img src="">
-<img src="">
-<img src="">
-<img src="">
-<img src="">
+<img src="https://github.com/zed1025/Simply-Coffee/blob/master/screenshots/1.png">
+<img src="https://github.com/zed1025/Simply-Coffee/blob/master/screenshots/2.png">
+<img src="https://github.com/zed1025/Simply-Coffee/blob/master/screenshots/3.png">
+<img src="https://github.com/zed1025/Simply-Coffee/blob/master/screenshots/4.png">
+<img src="https://github.com/zed1025/Simply-Coffee/blob/master/screenshots/5.png">
 
 
 ## References
